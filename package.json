@@ -1,0 +1,13 @@
+{
+	"name": "@pt1602/cursor",
+	"version": "1.0.0",
+	"main": "./js/cursor.js",
+	"scripts": {
+    		"test": "echo \"Error: no test specified\" && exit 1"
+  	},
+	"bugs": {
+    		"url": "https://github.com/pt1602/gitlab-git-clone/issues"
+  	},
+	"license": "MIT",
+  	"author": "Philipp Tuchardt <post@pt1602.de>",
+}
