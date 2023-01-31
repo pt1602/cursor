@@ -1,13 +1,20 @@
 {
-	"name": "@pt1602/cursor",
-	"version": "1.0.0",
-	"main": "./js/cursor.js",
-	"scripts": {
-    		"test": "echo \"Error: no test specified\" && exit 1"
-  	},
-	"bugs": {
-    		"url": "https://github.com/pt1602/gitlab-git-clone/issues"
-  	},
-	"license": "MIT",
-  	"author": "Philipp Tuchardt <post@pt1602.de>",
+    "name": "@pt1602/cursor",
+    "version": "1.0.3",
+    "main": "./src/ts/index.ts",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "bugs": {
+        "url": "https://github.com/pt1602/cursor/issues"
+    },
+    "license": "MIT",
+    "author": "Philipp Tuchardt <post@pt1602.de>",
+    "devDependencies": {
+        "gulp": "^4.0.2",
+        "gulp-clean-css": "^4.3.0",
+        "gulp-cli": "^2.3.0",
+        "gulp-sass": "^5.1.0",
+        "sass": "^1.57.1"
+    }
 }

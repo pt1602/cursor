@@ -1,9 +1,9 @@
 {
     "include": [
-        "src"
+        "src/ts"
     ],
     "compilerOptions": {
-        "outDir": "./js",
+        "outDir": "./dist/js",
         "target": "es2016",
         "module": "commonjs",
         "strict": true,
