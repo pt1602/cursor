@@ -1,6 +1,6 @@
 {
     "name": "@pt1602/cursor",
-    "version": "1.0.3",
+    "version": "1.0.4",
     "main": "./src/ts/index.ts",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1"
@@ -8,6 +8,11 @@
     "bugs": {
         "url": "https://github.com/pt1602/cursor/issues"
     },
+    "repository": {
+        "type": "git",
+        "url": "git+ssh://git@github.com/pt1602/cursor.git"
+    },
+    "homepage": "https://github.com/pt1602/cursor/issues",
     "license": "MIT",
     "author": "Philipp Tuchardt <post@pt1602.de>",
     "devDependencies": {

@@ -6,7 +6,6 @@ window.addEventListener('mousemove', function (e) {
     const posY: number = e.clientY;
 
     if (cursorDot && cursorOutline) {
-
         if ("style" in cursorDot) {
             cursorDot.style.left = `${posX}px`;
         }
@@ -15,12 +14,9 @@ window.addEventListener('mousemove', function (e) {
             cursorDot.style.top = `${posY}px`;
         }
 
-        if ("style" in cursorOutline) {
-            cursorOutline.style.left = `${posX}px`;
-        }
-
-        if ("style" in cursorOutline) {
-            cursorOutline.style.top = `${posY}px`;
-        }
+        cursorOutline.animate({
+            left: `${posX}px`,
+            top: `${posY}px`
+        }, {duration: 500, fill: "forwards"});
     }
 })

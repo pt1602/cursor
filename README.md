@@ -29,8 +29,8 @@ and this `<script>` tag after your closing `<body>` tag
 Last but not least add the following two div's somewhere to your project.
 
 ```html
-<div class="cursor-dot" data-cursor-dot></div>
-<div class="cursor-outline" data-cursor-outline></div>
+<div data-cursor-dot></div>
+<div data-cursor-outline></div>
 ```
 
 
