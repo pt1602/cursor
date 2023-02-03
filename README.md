@@ -12,6 +12,10 @@ A simple custom cursor created with scss and typescript, for me to create my fir
 
 ---
 
+__[Demo](https://pt1602.github.io/cursor/)__
+
+---
+
 ## Setup
 
 Add the styling into your `<head>` tag of your project. Like this:
@@ -31,6 +35,8 @@ Last step is to add the following div somewhere to your project.
 ```html
 <div data-cursor></div>
 ```
+
+---
 
 ## Configuration
 
