@@ -1,7 +1,14 @@
 "use strict";
+const cursorDot = document.querySelector('[data-cursor]');
+const cursorOutline = document.createElement('div');
+let outlineDelay;
+cursorDot === null || cursorDot === void 0 ? void 0 : cursorDot.classList.add('cursor-dot');
+cursorOutline.classList.add('cursor-outline');
+cursorDot === null || cursorDot === void 0 ? void 0 : cursorDot.after(cursorOutline);
+if (cursorDot && "getAttribute" in cursorDot) {
+    outlineDelay = Number(cursorDot.getAttribute("data-cursor-delay"));
+}
 window.addEventListener('mousemove', function (e) {
-    const cursorDot = document.querySelector('[data-cursor-dot]');
-    const cursorOutline = document.querySelector('[data-cursor-outline]');
     const posX = e.clientX;
     const posY = e.clientY;
     if (cursorDot && cursorOutline) {
@@ -11,9 +18,17 @@ window.addEventListener('mousemove', function (e) {
         if ("style" in cursorDot) {
             cursorDot.style.top = `${posY}px`;
         }
-        cursorOutline.animate({
-            left: `${posX}px`,
-            top: `${posY}px`
-        }, { duration: 500, fill: "forwards" });
+        if (outlineDelay) {
+            cursorOutline.animate({
+                left: `${posX}px`,
+                top: `${posY}px`
+            }, { duration: outlineDelay, fill: "forwards" });
+        }
+        else {
+            cursorOutline.animate({
+                left: `${posX}px`,
+                top: `${posY}px`
+            }, { duration: 300, fill: "forwards" });
+        }
     }
 });
