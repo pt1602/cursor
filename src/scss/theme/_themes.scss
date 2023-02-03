@@ -1,0 +1,27 @@
+body {
+    cursor: none;
+}
+
+.cursor {
+    &-dot {
+        height: var(--cursor-dot-size);
+        width: var(--cursor-dot-size);
+        background-color: var(--cursor-dot-color);
+    }
+
+    &-outline {
+        width: var(--cursor-outline-size);
+        height: var(--cursor-outline-size);
+        border: var(--cursor-outline-width) solid var(--cursor-outline-color);
+    }
+
+    &-dot, &-outline {
+        position: fixed;
+        top: 0;
+        left: 0;
+        transform: translate(-50%, -50%);
+        border-radius: var(--cursor-border-radius);
+        z-index: var(--cursor-z-index);
+        pointer-events: none;
+    }
+}

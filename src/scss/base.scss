@@ -1,25 +1,2 @@
-body {
-    cursor: none;
-}
-
-[data-cursor-dot] {
-    height: 5px;
-    width: 5px;
-    background-color: #fff;
-}
-
-[data-cursor-outline] {
-    width: 30px;
-    height: 30px;
-    border: 2px solid #fff;
-}
-
-[data-cursor-dot], [data-cursor-outline] {
-    position: fixed;
-    top: 0;
-    left: 0;
-    transform: translate(-50%, -50%);
-    border-radius: 50%;
-    z-index: 100;
-    pointer-events: none;
-}
+@import 'abstracts/variables';
+@import 'theme/themes';

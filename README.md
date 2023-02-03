@@ -8,11 +8,11 @@
 
 # PT1602 - Cursor
 
-A simple custom cursor created with scss and typescript.
+A simple custom cursor created with scss and typescript, for me to create my first npm package.
 
 ---
 
-## Usage
+## Setup
 
 Add the styling into your `<head>` tag of your project. Like this:
 
@@ -26,11 +26,37 @@ and this `<script>` tag after your closing `<body>` tag
 <script src="./public/libs/@pt1602/cursor/dist/js/index.js"></script>
 ```
 
-Last but not least add the following two div's somewhere to your project.
+Last step is to add the following div somewhere to your project.
 
 ```html
-<div data-cursor-dot></div>
-<div data-cursor-outline></div>
+<div data-cursor></div>
+```
+
+## Configuration
+
+Via the `data-cursor-delay` attribute you are able to set a custom delay for the animation (default 300).
+
+__Example:__
+
+```html
+<div data-cursor data-cursor-delay="600"></div>
+```
+
+## Styling
+
+To add your own styling just override the default css variables.
+
+```css
+* {
+    --cursor-primary-color: #55fff5;
+    --cursor-z-index: 100;
+    --cursor-dot-color: var(--cursor-primary-color);
+    --cursor-dot-size: 5px;
+    --cursor-outline-size: 30px;
+    --cursor-outline-width: 2px;
+    --cursor-outline-color: var(--cursor-primary-color);
+    --cursor-border-radius: 50%;
+}
 ```
 
 

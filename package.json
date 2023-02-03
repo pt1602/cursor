@@ -1,9 +1,10 @@
 {
     "name": "@pt1602/cursor",
-    "version": "1.0.4",
+    "version": "1.0.5",
     "main": "./src/ts/index.ts",
     "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1"
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "release": "tsc && gulp && npm publish"
     },
     "bugs": {
         "url": "https://github.com/pt1602/cursor/issues"
@@ -12,14 +13,24 @@
         "type": "git",
         "url": "git+ssh://git@github.com/pt1602/cursor.git"
     },
-    "homepage": "https://github.com/pt1602/cursor/issues",
+    "homepage": "https://github.com/pt1602/cursor/",
     "license": "MIT",
-    "author": "Philipp Tuchardt <post@pt1602.de>",
+    "author": {
+        "email": "npm@pt1602.de",
+        "name": "Philipp Tuchardt"
+    },
     "devDependencies": {
         "gulp": "^4.0.2",
         "gulp-clean-css": "^4.3.0",
         "gulp-cli": "^2.3.0",
         "gulp-sass": "^5.1.0",
         "sass": "^1.57.1"
-    }
+    },
+    "keywords": [
+        "js",
+        "cursor",
+        "custom cursor",
+        "scss",
+        "typescript"
+    ]
 }
