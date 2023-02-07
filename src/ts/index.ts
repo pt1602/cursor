@@ -1,13 +1,19 @@
 const cursorDot: HTMLElement | null = document.querySelector('[data-cursor]');
-const cursorOutline: HTMLElement = document.createElement('div')
+const cursorOutline: HTMLElement = document.createElement('div');
+const allLinksAndButtons: NodeListOf<HTMLElement> = document.querySelectorAll('a, button');
 let outlineDelay: number | null;
-cursorDot?.classList.add('cursor-dot')
+cursorDot?.classList.add('cursor-dot');
 cursorOutline.classList.add('cursor-outline');
+let cursorOutlineSize: number = 30;
 cursorDot?.after(cursorOutline);
 
 if (cursorDot && "getAttribute" in cursorDot) {
     outlineDelay = Number(cursorDot.getAttribute("data-cursor-delay"));
 }
+
+window.addEventListener('load', () => {
+    cursorOutlineSize = cursorOutline.offsetWidth;
+});
 
 window.addEventListener('mousemove', function (e) {
     const posX: number = e.clientX;
@@ -16,9 +22,6 @@ window.addEventListener('mousemove', function (e) {
     if (cursorDot && cursorOutline) {
         if ("style" in cursorDot) {
             cursorDot.style.left = `${posX}px`;
-        }
-
-        if ("style" in cursorDot) {
             cursorDot.style.top = `${posY}px`;
         }
 
@@ -35,3 +38,20 @@ window.addEventListener('mousemove', function (e) {
         }
     }
 })
+
+allLinksAndButtons.forEach((item) => {
+    item.onmouseover = () => {
+        if("style" in cursorOutline) {
+            cursorOutline.style.width = cursorOutlineSize * 1.25 + 'px'
+            cursorOutline.style.height = cursorOutlineSize * 1.25 + 'px'
+        }
+    }
+
+
+    item.onmouseout = () => {
+        if("style" in cursorOutline) {
+            cursorOutline.style.width = cursorOutlineSize + 'px'
+            cursorOutline.style.height = cursorOutlineSize + 'px'
+        }
+    }
+});

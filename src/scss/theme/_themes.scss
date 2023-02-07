@@ -2,6 +2,12 @@ body {
     cursor: none;
 }
 
+a, button {
+    &:hover {
+        cursor: none;
+    }
+}
+
 .cursor {
     &-dot {
         height: var(--cursor-dot-size);
@@ -13,6 +19,7 @@ body {
         width: var(--cursor-outline-size);
         height: var(--cursor-outline-size);
         border: var(--cursor-outline-width) solid var(--cursor-outline-color);
+        transition: all .25s ease;
     }
 
     &-dot, &-outline {
