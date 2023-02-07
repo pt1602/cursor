@@ -2,9 +2,29 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    --text-color: #fff;
+    --bg-color: #151515;
 }
 
 body {
-    height: 100vh;
-    background-color: #151515;
+    height: 100%;
+    color: var(--text-color);
+    background-color: var(--bg-color);
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+
+h1 {
+    margin-top: 80px;
+    margin-bottom: 60px;
+}
+
+a {
+    color: var(--text-color);
+    display: block;
+}
+
+button {
+    display: block;
+    margin: 0 auto;
 }
