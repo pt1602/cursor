@@ -19,8 +19,6 @@ window.addEventListener('mousemove', function (e) {
     if (cursorDot && cursorOutline) {
         if ("style" in cursorDot) {
             cursorDot.style.left = `${posX}px`;
-        }
-        if ("style" in cursorDot) {
             cursorDot.style.top = `${posY}px`;
         }
         if (outlineDelay) {
